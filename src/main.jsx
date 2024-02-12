@@ -6,6 +6,12 @@ import MainApp from './components/MainApp.jsx';
 import './styles/reset.css';
 import './styles/index.css';
 
+// default data object
+import defaultData from './utility/defaultData.js';
+
+// testing
+console.log(defaultData);
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <header>

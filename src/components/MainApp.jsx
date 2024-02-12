@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useImmer } from 'use-immer';
 import { v4 as uuidv4 } from 'uuid';
 
 import Editor from './Editor.jsx';

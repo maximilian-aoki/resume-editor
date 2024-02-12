@@ -1,16 +1,11 @@
-const userData = {
-  nextId: 11,
+const defaultData = {
+  resumeArr: [0],
+  nextId: 10,
   resumeData: {
     0: {
       id: 0,
       type: 'resume',
       resumeName: 'Example Resume',
-      contentObjectIds: [1],
-    },
-
-    1: {
-      id: 1,
-      type: 'content',
       name: 'Your Name Here',
       position: 'Your Position',
       summary:
@@ -20,57 +15,64 @@ const userData = {
       email: 'example@gmail.com',
       linkedinUrl: 'https://www.linkedin.com/',
       githubUrl: 'https://github.com/',
-      educationObjectIds: [2],
-      experienceObjectIds: [4, 6],
-      skillObjectIds: [8, 9, 10],
+      educationObjectIds: [1],
+      experienceObjectIds: [3, 5],
+      skillObjectIds: [7, 8, 9],
     },
 
-    2: {
-      id: 2,
+    1: {
+      id: 1,
       type: 'education',
       institution: 'Institution Name',
       program: 'Program/Degree Name',
       date: 'Month and Year of Completion',
-      detailObjectIds: [3],
+      detailObjectIds: [2],
     },
 
-    3: {
-      id: 3,
+    2: {
+      id: 2,
       type: 'education-detail',
       detail:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu ultrices, consectetur erat non, tempor tellus.',
     },
 
-    4: {
-      id: 4,
+    3: {
+      id: 3,
       type: 'experience',
       position: 'Position Title',
       company: 'Name of Company/Institution',
       date: 'Month and Year of Start/Completion',
-      detailObjectIds: [5],
+      detailObjectIds: [4],
+    },
+
+    4: {
+      id: 4,
+      type: 'experience-detail',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu ultrices, consectetur erat non, tempor tellus.',
     },
 
     5: {
       id: 5,
-      type: 'experience-detail',
-      detail:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu ultrices, consectetur erat non, tempor tellus.',
-    },
-
-    6: {
-      id: 6,
       type: 'experience',
       position: 'Position Title',
       company: 'Name of Company/Institution',
       date: 'Month and Year of Start/Completion',
-      detailObjectIds: [7],
+      detailObjectIds: [6],
+    },
+
+    6: {
+      id: 6,
+      type: 'experience-detail',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu ultrices, consectetur erat non, tempor tellus.',
     },
 
     7: {
       id: 7,
-      type: 'experience-detail',
-      detail:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu ultrices, consectetur erat non, tempor tellus.',
+      type: 'skill',
+      skill: 'Name of Skill',
+      detail: 'Expand on Skill Areas',
     },
 
     8: {
@@ -86,14 +88,7 @@ const userData = {
       skill: 'Name of Skill',
       detail: 'Expand on Skill Areas',
     },
-
-    10: {
-      id: 10,
-      type: 'skill',
-      skill: 'Name of Skill',
-      detail: 'Expand on Skill Areas',
-    },
   },
 };
 
-export default userData;
+export default defaultData;
