@@ -14,7 +14,7 @@ export default class DataManager {
     dataCopy.resumeData[dataCopy.nextId] = {
       id: dataCopy.nextId,
       type: 'resume',
-      currentPanel: 'resume',
+      currentPanel: 'Resumes',
       resumeName: '',
       name: '',
       position: '',
@@ -140,6 +140,7 @@ export default class DataManager {
   }
 
   // LEAF ARRAY METHODS (for education and experience)
+
   addLeaf(type, parentId) {
     const dataCopy = this.data;
 

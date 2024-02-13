@@ -6,7 +6,7 @@ const defaultData = {
     0: {
       id: 0,
       type: 'resume',
-      currentPanel: 'resume',
+      currentPanel: 'Resumes',
       resumeName: 'Example Resume',
       name: 'Your Name Here',
       position: 'Your Position',

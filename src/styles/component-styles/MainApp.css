@@ -1,4 +1,9 @@
 .main-container {
   padding: 1rem;
   gap: 1rem;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+}
+.main-container > div {
+  gap: 1rem;
 }
