@@ -1,6 +1,9 @@
 # Custom
+__mocks__
 eslintrc.cjs
 .prettierrc.json
+babel.config.cjs
+jest.config.cjs
 vite.config.js
 
 # Logs

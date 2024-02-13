@@ -1,10 +1,12 @@
 const defaultData = {
   resumeArr: [0],
+  currentResumeId: 0,
   nextId: 10,
   resumeData: {
     0: {
       id: 0,
       type: 'resume',
+      currentPanel: 'resume',
       resumeName: 'Example Resume',
       name: 'Your Name Here',
       position: 'Your Position',
@@ -22,6 +24,7 @@ const defaultData = {
 
     1: {
       id: 1,
+      parentId: 0,
       type: 'education',
       institution: 'Institution Name',
       program: 'Program/Degree Name',
@@ -31,6 +34,7 @@ const defaultData = {
 
     2: {
       id: 2,
+      parentId: 1,
       type: 'education-detail',
       detail:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu ultrices, consectetur erat non, tempor tellus.',
@@ -38,6 +42,7 @@ const defaultData = {
 
     3: {
       id: 3,
+      parentId: 0,
       type: 'experience',
       position: 'Position Title',
       company: 'Name of Company/Institution',
@@ -47,6 +52,7 @@ const defaultData = {
 
     4: {
       id: 4,
+      parentId: 3,
       type: 'experience-detail',
       detail:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu ultrices, consectetur erat non, tempor tellus.',
@@ -54,6 +60,7 @@ const defaultData = {
 
     5: {
       id: 5,
+      parentId: 0,
       type: 'experience',
       position: 'Position Title',
       company: 'Name of Company/Institution',
@@ -63,6 +70,7 @@ const defaultData = {
 
     6: {
       id: 6,
+      parentId: 5,
       type: 'experience-detail',
       detail:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu ultrices, consectetur erat non, tempor tellus.',
@@ -70,6 +78,7 @@ const defaultData = {
 
     7: {
       id: 7,
+      parentId: 0,
       type: 'skill',
       skill: 'Name of Skill',
       detail: 'Expand on Skill Areas',
@@ -77,6 +86,7 @@ const defaultData = {
 
     8: {
       id: 8,
+      parentId: 0,
       type: 'skill',
       skill: 'Name of Skill',
       detail: 'Expand on Skill Areas',
@@ -84,6 +94,7 @@ const defaultData = {
 
     9: {
       id: 9,
+      parentId: 0,
       type: 'skill',
       skill: 'Name of Skill',
       detail: 'Expand on Skill Areas',
