@@ -19,6 +19,7 @@ export default function Editor({
   onAddLeaf,
   onRemoveLeaf,
   onTextChange,
+  onStyleChange,
 }) {
   let editorView;
   let currentPanel = 'Resumes';
@@ -70,7 +71,7 @@ export default function Editor({
       />
     );
   } else if (currentPanel === 'Style') {
-    editorView = <StyleEditor data={data} />;
+    editorView = <StyleEditor data={data} onStyleChange={onStyleChange} />;
   }
 
   return (

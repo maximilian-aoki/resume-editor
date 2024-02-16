@@ -113,6 +113,17 @@ export default function MainApp() {
     setStorage({ ...dataManager.data });
   }
 
+  function handleStyleChange(e) {
+    const property = e.target.getAttribute('id');
+    const value = e.target.value;
+
+    dataManager.data.resumeData[dataManager.data.currentResumeId][property] =
+      value;
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+  }
+
   return (
     <div className="main-container grid">
       <div className="editor-container grid">
@@ -132,6 +143,7 @@ export default function MainApp() {
           onAddLeaf={handleAddLeaf}
           onRemoveLeaf={handleRemoveLeaf}
           onTextChange={handleTextChange}
+          onStyleChange={handleStyleChange}
         />
       </div>
       <div className="preview-container grid">

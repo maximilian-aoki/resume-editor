@@ -163,3 +163,15 @@ button.add-detail {
 .general .input-div {
   margin-right: 2rem;
 }
+
+/* style-specific */
+.style.entry select {
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  font-style: italic;
+}
+.style.entry input {
+  height: 3rem;
+  width: 100%;
+}
