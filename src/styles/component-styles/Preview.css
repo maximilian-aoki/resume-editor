@@ -1,3 +1,8 @@
 .preview-container {
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
+  height: 902px;
+  grid-template-rows: auto 1fr;
+}
+.template-page {
+  background-color: var(--white-smoke);
 }

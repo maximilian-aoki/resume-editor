@@ -9,12 +9,13 @@ import './styles/index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <header>
-      <h1>HEADER</h1>
+      <h1>RESUME CREATOR</h1>
     </header>
     <main>
-      <h2>MAIN CONTENT</h2>
       <MainApp />
     </main>
-    <footer>FOOTER</footer>
+    <footer>
+      <h4>2024 Copyright Maximilian Aoki</h4>
+    </footer>
   </React.StrictMode>,
 );

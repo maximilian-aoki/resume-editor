@@ -1,7 +1,160 @@
 .editor-container {
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
 }
 .panel-container {
   padding: 1rem;
+  gap: 0.5rem;
+  background-color: var(--white-smoke);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.editor-buttons {
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.editor-buttons > button {
+  appearance: none;
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  height: 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  cursor: pointer;
+}
+.editor-buttons > button:disabled {
+  cursor: auto;
+}
+
+/* other editable catagories */
+.entry {
+  position: relative;
+  background-color: white;
+  align-items: center;
+  height: auto;
+  padding: 1rem;
+}
+.entry.add-button {
+  padding: 0;
+}
+.entry.add-button > button {
+  color: white;
+  background-color: var(--teal);
+  height: 3rem;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.entry h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.entry h4 {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+.remove-catagory {
+  position: absolute;
+  background-color: rgb(215, 112, 112);
+  color: white;
+  cursor: pointer;
+  top: 0.5rem;
+  right: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+}
+.input-div {
+  grid-template-columns: 1fr 3fr;
   gap: 1rem;
+  margin-right: 5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+.input-div > label {
+  justify-self: end;
+  font-weight: 600;
+}
+.input-div.summary > label {
+  align-self: start;
+  margin-top: 0.4rem;
+}
+.input-div > input {
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+.input-div > textarea {
+  padding: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  resize: none;
+}
+
+/* details */
+.input-div.detail {
+  position: relative;
+}
+.input-div.detail label {
+  align-self: start;
+  margin-top: 0.4rem;
+}
+.input-div.detail button {
+  position: absolute;
+  right: -2.6rem;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: rgb(215, 112, 112);
+  color: white;
+}
+button.add-detail {
+  height: 2rem;
+  width: 20.6rem;
+  margin-left: 7.85rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* resume-specific */
+.resume.entry {
+  grid-template-columns: 8.5rem 1fr 3rem;
+  background-color: white;
+  align-content: center;
+  height: 3rem;
+  padding: 0;
+}
+.resume.entry > label {
+  margin-left: 1rem;
+  align-self: center;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.resume.entry > input {
+  width: 20rem;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  font-weight: 500;
+  align-self: center;
+}
+.resume.entry > button {
+  height: 3rem;
+  cursor: pointer;
+}
+.resume.entry.add-button > button {
+  height: 100%;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.remove-resume {
+  color: white;
+  background-color: rgb(215, 112, 112);
+}
+
+/* general-specific */
+.general .input-div {
+  margin-right: 2rem;
 }

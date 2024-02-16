@@ -1,5 +1,3 @@
-import '../styles/component-styles/ResumeEditor.css';
-
 export default function ResumeEditor({ data }) {
   return (
     <>
@@ -13,12 +11,12 @@ export default function ResumeEditor({ data }) {
               data-value="resumeName"
               value={data.resumeData[resumeId].resumeName}
             />
-            <button>Delete Resume</button>
+            <button className="remove-resume">X</button>
           </div>
         );
       })}
-      <div className="resume entry add-button grid">
-        <button>Add a Resume!</button>
+      <div className="resume entry add-button">
+        <button>Add a Resume</button>
       </div>
     </>
   );

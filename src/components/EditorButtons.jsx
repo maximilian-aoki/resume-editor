@@ -1,6 +1,7 @@
 export default function EditorButtons({ data, onTogglePanel }) {
   const buttonRenders = [
     'Resumes',
+    'General',
     'Education',
     'Experiences',
     'Skills',
@@ -15,7 +16,7 @@ export default function EditorButtons({ data, onTogglePanel }) {
         );
       }
       return (
-        <button key={title} className="inactive" disabled={true}>
+        <button key={title} className="inactive-disabled" disabled={true}>
           {title}
         </button>
       );
@@ -31,11 +32,11 @@ export default function EditorButtons({ data, onTogglePanel }) {
       );
     }
     return (
-      <button key={title} onClick={onTogglePanel}>
+      <button key={title} className="inactive" onClick={onTogglePanel}>
         {title}
       </button>
     );
   });
 
-  return <div className="editor-buttons">{buttonRenders}</div>;
+  return <div className="editor-buttons grid">{buttonRenders}</div>;
 }
