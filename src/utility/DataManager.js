@@ -15,7 +15,7 @@ export default class DataManager {
       id: dataCopy.nextId,
       type: 'resume',
       currentPanel: 'Resumes',
-      resumeName: '',
+      resumeName: 'New Resume',
       name: '',
       position: '',
       summary: '',

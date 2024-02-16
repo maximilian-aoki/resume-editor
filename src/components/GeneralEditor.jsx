@@ -1,4 +1,4 @@
-export default function GeneralEditor({ data }) {
+export default function GeneralEditor({ data, onTextChange }) {
   return (
     <div className="general entry grid">
       <h3>General Info:</h3>
@@ -6,7 +6,8 @@ export default function GeneralEditor({ data }) {
         <label htmlFor={`name`}>Name:</label>
         <input
           id={`name`}
-          data-id={data.resumeData[data.currentResumeId]}
+          onChange={onTextChange}
+          data-id={data.currentResumeId}
           data-value="name"
           value={data.resumeData[data.currentResumeId].name}
         />
@@ -15,7 +16,8 @@ export default function GeneralEditor({ data }) {
         <label htmlFor={`position`}>Position:</label>
         <input
           id={`position`}
-          data-id={data.resumeData[data.currentResumeId]}
+          onChange={onTextChange}
+          data-id={data.currentResumeId}
           data-value="position"
           value={data.resumeData[data.currentResumeId].position}
         />
@@ -24,7 +26,8 @@ export default function GeneralEditor({ data }) {
         <label htmlFor={`location`}>Location:</label>
         <input
           id={`location`}
-          data-id={data.resumeData[data.currentResumeId]}
+          onChange={onTextChange}
+          data-id={data.currentResumeId}
           data-value="location"
           value={data.resumeData[data.currentResumeId].location}
         />
@@ -33,7 +36,8 @@ export default function GeneralEditor({ data }) {
         <label htmlFor={`phone`}>Phone:</label>
         <input
           id={`phone`}
-          data-id={data.resumeData[data.currentResumeId]}
+          onChange={onTextChange}
+          data-id={data.currentResumeId}
           data-value="phone"
           value={data.resumeData[data.currentResumeId].phone}
         />
@@ -42,7 +46,8 @@ export default function GeneralEditor({ data }) {
         <label htmlFor={`email`}>Email:</label>
         <input
           id={`email`}
-          data-id={data.resumeData[data.currentResumeId]}
+          onChange={onTextChange}
+          data-id={data.currentResumeId}
           data-value="email"
           value={data.resumeData[data.currentResumeId].email}
         />
@@ -51,7 +56,8 @@ export default function GeneralEditor({ data }) {
         <label htmlFor={`linkedinUrl`}>LinkedIn URL:</label>
         <input
           id={`linkedinUrl`}
-          data-id={data.resumeData[data.currentResumeId]}
+          onChange={onTextChange}
+          data-id={data.currentResumeId}
           data-value="linkedinUrl"
           value={data.resumeData[data.currentResumeId].linkedinUrl}
         />
@@ -60,7 +66,8 @@ export default function GeneralEditor({ data }) {
         <label htmlFor={`githubUrl`}>GitHub URL:</label>
         <input
           id={`githubUrl`}
-          data-id={data.resumeData[data.currentResumeId]}
+          onChange={onTextChange}
+          data-id={data.currentResumeId}
           data-value="githubUrl"
           value={data.resumeData[data.currentResumeId].githubUrl}
         />
@@ -69,8 +76,9 @@ export default function GeneralEditor({ data }) {
         <label htmlFor={`summary`}>Summary:</label>
         <textarea
           id={`summary`}
+          onChange={onTextChange}
           rows={8}
-          data-id={data.resumeData[data.currentResumeId]}
+          data-id={data.currentResumeId}
           data-value="summary"
           value={data.resumeData[data.currentResumeId].summary}
         />

@@ -8,20 +8,67 @@ import StyleEditor from './StyleEditor';
 import EditorButtons from './EditorButtons';
 import '../styles/component-styles/Editor.css';
 
-export default function Editor({ data, onTogglePanel }) {
+export default function Editor({
+  data,
+  onTogglePanel,
+  onToggleResume,
+  onAddResume,
+  onRemoveResume,
+  onAddCatagory,
+  onRemoveCatagory,
+  onAddLeaf,
+  onRemoveLeaf,
+  onTextChange,
+}) {
   let editorView;
-  const currentPanel = data.resumeData[data.currentResumeId].currentPanel;
+  let currentPanel = 'Resumes';
+  if (data.currentResumeId !== null) {
+    currentPanel = data.resumeData[data.currentResumeId].currentPanel;
+  }
 
   if (currentPanel === 'Resumes') {
-    editorView = <ResumeEditor data={data} />;
+    editorView = (
+      <ResumeEditor
+        data={data}
+        onAddResume={onAddResume}
+        onRemoveResume={onRemoveResume}
+        onTextChange={onTextChange}
+        onToggleResume={onToggleResume}
+      />
+    );
   } else if (currentPanel === 'General') {
-    editorView = <GeneralEditor data={data} />;
+    editorView = <GeneralEditor data={data} onTextChange={onTextChange} />;
   } else if (currentPanel === 'Education') {
-    editorView = <EducationEditor data={data} />;
+    editorView = (
+      <EducationEditor
+        data={data}
+        onAddCatagory={onAddCatagory}
+        onRemoveCatagory={onRemoveCatagory}
+        onAddLeaf={onAddLeaf}
+        onRemoveLeaf={onRemoveLeaf}
+        onTextChange={onTextChange}
+      />
+    );
   } else if (currentPanel === 'Experiences') {
-    editorView = <ExperienceEditor data={data} />;
+    editorView = (
+      <ExperienceEditor
+        data={data}
+        onAddCatagory={onAddCatagory}
+        onRemoveCatagory={onRemoveCatagory}
+        onAddLeaf={onAddLeaf}
+        onRemoveLeaf={onRemoveLeaf}
+        onTextChange={onTextChange}
+      />
+    );
   } else if (currentPanel === 'Skills') {
-    editorView = <SkillsEditor data={data} />;
+    editorView = (
+      <SkillsEditor
+        data={data}
+        onAddCatagory={onAddCatagory}
+        onRemoveCatagory={onRemoveCatagory}
+        onTextChange={onTextChange}
+      />
+    );
   } else if (currentPanel === 'Style') {
     editorView = <StyleEditor data={data} />;
   }

@@ -154,6 +154,11 @@ button.add-detail {
   background-color: rgb(215, 112, 112);
 }
 
+/* resume styling */
+.resume.entry.active {
+  background-color: rgb(185, 255, 255);
+}
+
 /* general-specific */
 .general .input-div {
   margin-right: 2rem;

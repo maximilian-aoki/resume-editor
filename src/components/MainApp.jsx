@@ -33,6 +33,86 @@ export default function MainApp() {
     setStorage({ ...dataManager.data });
   }
 
+  function handleToggleResume(e) {
+    const resumeId = Number(e.target.getAttribute('data-id'));
+
+    dataManager.data.currentResumeId = resumeId;
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+
+    e.preventDefault();
+  }
+
+  function handleTextChange(e) {
+    const inputId = e.target.getAttribute('data-id');
+    const inputProperty = e.target.getAttribute('data-value');
+
+    dataManager.data.resumeData[inputId][inputProperty] = e.target.value;
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+  }
+
+  function handleAddResume() {
+    dataManager.addResume();
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+  }
+
+  function handleRemoveResume(e) {
+    dataManager.removeResume(Number(e.target.getAttribute('data-id')));
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+
+    e.stopPropagation();
+  }
+
+  function handleAddCatagory(e) {
+    const type = e.target.getAttribute('data-type');
+    const parentId = Number(e.target.getAttribute('data-parentid'));
+
+    dataManager.addCatagory(type, parentId);
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+  }
+
+  function handleRemoveCatagory(e) {
+    const type = e.target.getAttribute('data-type');
+    const parentId = Number(e.target.getAttribute('data-parentid'));
+    const id = Number(e.target.getAttribute('data-id'));
+
+    dataManager.removeCatagory(type, parentId, id);
+
+    console.log('remove');
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+  }
+
+  function handleAddLeaf(e) {
+    const type = e.target.getAttribute('data-type');
+    const parentId = Number(e.target.getAttribute('data-parentid'));
+
+    dataManager.addLeaf(type, parentId);
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+  }
+
+  function handleRemoveLeaf(e) {
+    const parentId = Number(e.target.getAttribute('data-parentid'));
+    const id = Number(e.target.getAttribute('data-id'));
+
+    dataManager.removeLeaf(parentId, id);
+
+    setData({ ...dataManager.data });
+    setStorage({ ...dataManager.data });
+  }
+
   return (
     <div className="main-container grid">
       <div className="editor-container grid">
@@ -41,7 +121,18 @@ export default function MainApp() {
         ) : (
           <h2>No Resumes Created... Yet!</h2>
         )}
-        <Editor data={data} onTogglePanel={handleTogglePanel} />
+        <Editor
+          data={data}
+          onTogglePanel={handleTogglePanel}
+          onToggleResume={handleToggleResume}
+          onAddResume={handleAddResume}
+          onRemoveResume={handleRemoveResume}
+          onAddCatagory={handleAddCatagory}
+          onRemoveCatagory={handleRemoveCatagory}
+          onAddLeaf={handleAddLeaf}
+          onRemoveLeaf={handleRemoveLeaf}
+          onTextChange={handleTextChange}
+        />
       </div>
       <div className="preview-container grid">
         <h2>Preview</h2>

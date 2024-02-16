@@ -1,4 +1,9 @@
-export default function SkillsEditor({ data }) {
+export default function SkillsEditor({
+  data,
+  onAddCatagory,
+  onRemoveCatagory,
+  onTextChange,
+}) {
   return (
     <>
       {data.resumeData[data.currentResumeId].skillObjectIds.map(
@@ -10,6 +15,7 @@ export default function SkillsEditor({ data }) {
                 <label htmlFor={`skill-${index + 1}`}>Skill:</label>
                 <input
                   id={`skill-${index + 1}`}
+                  onChange={onTextChange}
                   data-id={skillId}
                   data-value="skill"
                   value={data.resumeData[skillId].skill}
@@ -19,18 +25,33 @@ export default function SkillsEditor({ data }) {
                 <label htmlFor={`detail-${index + 1}`}>Detail:</label>
                 <input
                   id={`detail-${index + 1}`}
+                  onChange={onTextChange}
                   data-id={skillId}
                   data-value="detail"
                   value={data.resumeData[skillId].detail}
                 />
               </div>
-              <button className="remove-catagory">X</button>
+              <button
+                className="remove-catagory"
+                onClick={onRemoveCatagory}
+                data-type="skill"
+                data-parentid={data.currentResumeId}
+                data-id={skillId}
+              >
+                X
+              </button>
             </div>
           );
         },
       )}
       <div className="skill entry add-button grid">
-        <button>Add a Skill</button>
+        <button
+          onClick={onAddCatagory}
+          data-type="skill"
+          data-parentid={data.currentResumeId}
+        >
+          Add a Skill
+        </button>
       </div>
     </>
   );

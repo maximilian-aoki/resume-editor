@@ -1,4 +1,11 @@
-export default function EducationEditor({ data }) {
+export default function EducationEditor({
+  data,
+  onAddCatagory,
+  onRemoveCatagory,
+  onAddLeaf,
+  onRemoveLeaf,
+  onTextChange,
+}) {
   return (
     <>
       {data.resumeData[data.currentResumeId].educationObjectIds.map(
@@ -10,6 +17,7 @@ export default function EducationEditor({ data }) {
                 <label htmlFor={`institution-${index + 1}`}>Institution:</label>
                 <input
                   id={`institution-${index + 1}`}
+                  onChange={onTextChange}
                   data-id={educationId}
                   data-value="institution"
                   value={data.resumeData[educationId].institution}
@@ -19,6 +27,7 @@ export default function EducationEditor({ data }) {
                 <label htmlFor={`program-${index + 1}`}>Program:</label>
                 <input
                   id={`program-${index + 1}`}
+                  onChange={onTextChange}
                   data-id={educationId}
                   data-value="program"
                   value={data.resumeData[educationId].program}
@@ -28,6 +37,7 @@ export default function EducationEditor({ data }) {
                 <label htmlFor={`date-${index + 1}`}>Date:</label>
                 <input
                   id={`date-${index + 1}`}
+                  onChange={onTextChange}
                   data-id={educationId}
                   data-value="date"
                   value={data.resumeData[educationId].date}
@@ -37,30 +47,59 @@ export default function EducationEditor({ data }) {
               {data.resumeData[educationId].detailObjectIds.map(
                 (detailId, index) => {
                   return (
-                    <div className="input-div detail grid">
+                    <div key={detailId} className="input-div detail grid">
                       <label htmlFor={`detail-${detailId}`}>
                         Detail {index + 1}:
                       </label>
                       <textarea
                         id={`detail-${detailId}`}
+                        onChange={onTextChange}
                         rows={3}
                         data-id={detailId}
                         data-value="detail"
                         value={data.resumeData[detailId].detail}
                       />
-                      <button className="remove-detail">X</button>
+                      <button
+                        className="remove-detail"
+                        onClick={onRemoveLeaf}
+                        data-parentid={educationId}
+                        data-id={detailId}
+                      >
+                        X
+                      </button>
                     </div>
                   );
                 },
               )}
-              <button className="add-detail">Add Detail</button>
-              <button className="remove-catagory">X</button>
+              <button
+                className="add-detail"
+                onClick={onAddLeaf}
+                data-type="education"
+                data-parentid={educationId}
+              >
+                Add Detail
+              </button>
+              <button
+                className="remove-catagory"
+                onClick={onRemoveCatagory}
+                data-type="education"
+                data-parentid={data.currentResumeId}
+                data-id={educationId}
+              >
+                X
+              </button>
             </div>
           );
         },
       )}
       <div className="education entry add-button grid">
-        <button>Add an Education</button>
+        <button
+          onClick={onAddCatagory}
+          data-type="education"
+          data-parentid={data.currentResumeId}
+        >
+          Add an Education
+        </button>
       </div>
     </>
   );
