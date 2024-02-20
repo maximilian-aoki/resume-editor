@@ -9,7 +9,7 @@ import './styles/index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <header>
-      <h1>MAXY-RESUME</h1>
+      <h1>MAXY-RESUME EDITOR</h1>
     </header>
     <main>
       <MainApp />
