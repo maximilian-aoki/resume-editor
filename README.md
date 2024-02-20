@@ -1,6 +1,6 @@
 # React Resume Editor
 
-Link to Live Page
+[Link to Live Page](https://resume-editor.pages.dev/)
 
 A dynamic resume editor built entirely with React.
 
