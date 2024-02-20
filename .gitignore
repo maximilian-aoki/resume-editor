@@ -1,6 +1,6 @@
 # Custom
 __mocks__
-eslintrc.cjs
+.eslintrc.cjs
 .prettierrc.json
 babel.config.cjs
 jest.config.cjs
