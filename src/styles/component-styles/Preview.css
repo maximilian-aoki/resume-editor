@@ -2,6 +2,131 @@
   height: 902px;
   grid-template-rows: auto 1fr;
 }
+
+/* UNIVERSAL */
 .template-page {
   background-color: var(--white-smoke);
+}
+
+/* STANDARD VIEW */
+.template-page.standard {
+  grid-template-rows: auto 1fr;
+}
+.preview-header,
+.preview-content {
+  padding: 3rem 5rem;
+}
+.preview-header {
+  grid-template-columns: 3fr 2fr;
+  color: white;
+}
+.preview-header > .header-main {
+  align-content: center;
+  gap: 0.5rem;
+}
+.header-main > h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.header-main > h3 {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+.preview-header > .header-details {
+  justify-items: end;
+  align-content: start;
+  gap: 0.5rem;
+}
+.header-details > a {
+  color: rgb(200, 246, 255);
+  font-style: italic;
+}
+.preview-content {
+  align-content: start;
+}
+/* section-agnostic styles */
+.preview-section {
+  position: relative;
+  align-content: start;
+  margin-bottom: 1rem;
+}
+.preview-section > h4 {
+  font-weight: bold;
+}
+.preview-section > hr {
+  width: 100%;
+  margin-top: 2px;
+}
+.preview-section p {
+  font-size: 0.9rem;
+}
+.preview-summary > p {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+/* education/experience */
+.preview-entry-header {
+  grid-template-columns: 1fr 1fr;
+}
+.preview-entry-header > p {
+  font-weight: 600;
+}
+.preview-entry-header-institution {
+  justify-self: start;
+}
+.preview-entry-header-date {
+  justify-self: end;
+}
+.preview-entry-program {
+  font-style: italic;
+}
+.preview-entry > ul {
+  list-style-type: circle;
+  padding-left: 2rem;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+/* skills */
+.preview-skill-entries {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+}
+.preview-skill-entry > h5 {
+  font-size: 0.9rem;
+}
+.preview-skill-entry > p {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+/* icons */
+span {
+  position: relative;
+}
+.preview-container img {
+  position: absolute;
+  top: -2px;
+  width: 1.3rem;
+  margin-left: 0.3rem;
+  object-fit: contain;
+}
+.header-details-location img {
+  top: -4px;
+}
+.preview-content img {
+  left: -2.5rem;
+  top: -0.2rem;
+}
+
+/* LATER FEATURES */
+
+/* LEFT VIEW */
+.template-page.left {
+  grid-template-rows: 1fr 4fr;
+}
+
+/* RIGHT VIEW */
+.template-page.right {
+  grid-template-rows: 1fr 4fr;
 }

@@ -31,7 +31,7 @@ const defaultData = {
       type: 'education',
       institution: 'Institution Name',
       program: 'Program/Degree Name',
-      date: 'Month and Year of Completion',
+      date: 'Month 20XX',
       detailObjectIds: [2],
     },
 
@@ -49,7 +49,7 @@ const defaultData = {
       type: 'experience',
       position: 'Position Title',
       company: 'Name of Company/Institution',
-      date: 'Month and Year of Start/Completion',
+      date: 'Month 20XX',
       detailObjectIds: [4],
     },
 
@@ -67,7 +67,7 @@ const defaultData = {
       type: 'experience',
       position: 'Position Title',
       company: 'Name of Company/Institution',
-      date: 'Month and Year of Start/Completion',
+      date: 'Month 20XX',
       detailObjectIds: [6],
     },
 

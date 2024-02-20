@@ -16,12 +16,12 @@ export default class DataManager {
       type: 'resume',
       currentPanel: 'Resumes',
       resumeName: 'New Resume',
-      name: '',
-      position: '',
+      name: 'Your Name Here',
+      position: 'Your Position',
       summary: '',
-      location: '',
-      phone: '',
-      email: '',
+      location: 'City, Region',
+      phone: '(123)-456-7890',
+      email: 'example@gmail.com',
       linkedinUrl: 'https://www.linkedin.com/',
       githubUrl: 'https://github.com/',
       layoutOption: 'Standard',
@@ -91,9 +91,9 @@ export default class DataManager {
         id: dataCopy.nextId,
         parentId: parentId,
         type: 'education',
-        institution: '',
-        program: '',
-        date: '',
+        institution: 'Institution Name',
+        program: 'Program/Degree Name',
+        date: 'Month 20XX',
         detailObjectIds: [],
       };
     }
@@ -102,9 +102,9 @@ export default class DataManager {
         id: dataCopy.nextId,
         parentId: parentId,
         type: 'experience',
-        position: '',
-        company: '',
-        date: '',
+        position: 'Position Title',
+        company: 'Name of Company/Institution',
+        date: 'Month 20XX',
         detailObjectIds: [],
       };
     }
@@ -113,8 +113,8 @@ export default class DataManager {
         id: dataCopy.nextId,
         parentId: parentId,
         type: 'skill',
-        skill: '',
-        detail: '',
+        skill: 'Name of Skill',
+        detail: 'Expand on Skill Areas',
       };
     }
 

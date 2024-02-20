@@ -12,8 +12,12 @@ export default function StyleEditor({ data, onStyleChange }) {
             onChange={onStyleChange}
           >
             <option value="Standard">Standard</option>
-            <option value="Vertical Left">Vertical Left</option>
-            <option value="Vertical Right">Vertical Right</option>
+            <option value="Vertical Left" disabled={true}>
+              Vertical Left
+            </option>
+            <option value="Vertical Right" disabled={true}>
+              Vertical Right
+            </option>
           </select>
         </div>
         <div className="input-div grid">
