@@ -60,13 +60,11 @@ export default function EducationEditor({
                         value={data.resumeData[detailId].detail}
                       />
                       <button
-                        className="remove-detail"
+                        className="remove-detail trash"
                         onClick={onRemoveLeaf}
                         data-parentid={educationId}
                         data-id={detailId}
-                      >
-                        X
-                      </button>
+                      ></button>
                     </div>
                   );
                 },
@@ -80,14 +78,12 @@ export default function EducationEditor({
                 Add Detail
               </button>
               <button
-                className="remove-catagory"
+                className="remove-catagory trash"
                 onClick={onRemoveCatagory}
                 data-type="education"
                 data-parentid={data.currentResumeId}
                 data-id={educationId}
-              >
-                X
-              </button>
+              ></button>
             </div>
           );
         },

@@ -60,13 +60,11 @@ export default function ExperienceEditor({
                         value={data.resumeData[detailId].detail}
                       />
                       <button
-                        className="remove-detail"
+                        className="remove-detail trash"
                         onClick={onRemoveLeaf}
                         data-parentid={experienceId}
                         data-id={detailId}
-                      >
-                        X
-                      </button>
+                      ></button>
                     </div>
                   );
                 },
@@ -80,14 +78,12 @@ export default function ExperienceEditor({
                 Add Detail
               </button>
               <button
-                className="remove-catagory"
+                className="remove-catagory trash"
                 onClick={onRemoveCatagory}
                 data-type="experience"
                 data-parentid={data.currentResumeId}
                 data-id={experienceId}
-              >
-                X
-              </button>
+              ></button>
             </div>
           );
         },

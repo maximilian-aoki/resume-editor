@@ -6,6 +6,11 @@ import '../styles/component-styles/Preview.css';
 export default function Preview({ data }) {
   let previewTemplate, layoutClass, fontStyle;
 
+  // catch the case where there are no resumes
+  if (data.resumeArr.length === 0) {
+    return <div className={'template-page grid'}></div>;
+  }
+
   const currentView = data.resumeData[data.currentResumeId].layoutOption;
   const currentFont = data.resumeData[data.currentResumeId].fontOption;
 

@@ -30,12 +30,10 @@ export default function ResumeEditor({
               value={data.resumeData[resumeId].resumeName}
             />
             <button
-              className="remove-resume"
+              className="remove-resume trash"
               data-id={resumeId}
               onClick={onRemoveResume}
-            >
-              X
-            </button>
+            ></button>
           </div>
         );
       })}

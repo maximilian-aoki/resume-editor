@@ -28,7 +28,8 @@
 /* other editable catagories */
 .entry {
   position: relative;
-  background-color: white;
+  background-color: rgb(238, 238, 238);
+  border-radius: 0.5rem;
   align-items: center;
   height: auto;
   padding: 1rem;
@@ -57,8 +58,6 @@
 }
 .remove-catagory {
   position: absolute;
-  background-color: rgb(215, 112, 112);
-  color: white;
   cursor: pointer;
   top: 0.5rem;
   right: 0.5rem;
@@ -107,8 +106,6 @@
   width: 2rem;
   height: 2rem;
   cursor: pointer;
-  background-color: rgb(215, 112, 112);
-  color: white;
 }
 button.add-detail {
   height: 2rem;
@@ -121,7 +118,8 @@ button.add-detail {
 /* resume-specific */
 .resume.entry {
   grid-template-columns: 8.5rem 1fr 3rem;
-  background-color: white;
+  background-color: rgb(238, 238, 238);
+  border-radius: 0.5rem;
   align-content: center;
   height: 3rem;
   padding: 0;
@@ -149,10 +147,6 @@ button.add-detail {
   width: 100%;
   font-size: 1.2rem;
 }
-.remove-resume {
-  color: white;
-  background-color: rgb(215, 112, 112);
-}
 
 /* resume styling */
 .resume.entry.active {
@@ -174,4 +168,49 @@ button.add-detail {
 .style.entry input {
   height: 3rem;
   width: 100%;
+}
+
+/* TRASH BUTTONS */
+.trash {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: grey;
+  background-image: url('/trash.svg');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.trash:hover {
+  background-color: rgb(211, 87, 87);
+}
+
+/* INTERACTIVITY */
+.entry:not(.active):not(.style):not(.general):hover {
+  background-color: rgb(223, 223, 223);
+}
+.add-button button {
+  border-radius: 0.5rem;
+  border: none;
+}
+.add-button button:hover {
+  background-color: rgb(12, 173, 173);
+}
+.add-detail {
+  border-radius: 0.5rem;
+  border: 1px solid grey;
+}
+.add-detail:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+/* TAB BUTTONS */
+.editor-buttons > button.active {
+  background-color: var(--white-smoke);
+  color: black;
+}
+.editor-buttons > button.inactive {
+  background-color: rgb(194, 194, 194);
+}
+.editor-buttons > button.inactive:hover {
+  background-color: rgb(211, 222, 230);
 }

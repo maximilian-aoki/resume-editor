@@ -32,14 +32,12 @@ export default function SkillsEditor({
                 />
               </div>
               <button
-                className="remove-catagory"
+                className="remove-catagory trash"
                 onClick={onRemoveCatagory}
                 data-type="skill"
                 data-parentid={data.currentResumeId}
                 data-id={skillId}
-              >
-                X
-              </button>
+              ></button>
             </div>
           );
         },
